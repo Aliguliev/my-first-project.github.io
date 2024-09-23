@@ -12,3 +12,15 @@ button{
     font-size: 20px;
     background-color: aliceblue;
 }
+img{
+    
+    height: 200px;
+    width: auto;
+}
+form{
+    display: none;
+    
+}
+#order{
+    margin: 10px;
+}
