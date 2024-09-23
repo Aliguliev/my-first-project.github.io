@@ -1,7 +1,7 @@
 body{
     margin-top: 10vh;
     background-color: white;
-    color:white;
+    color: rgb(34, 34, 34);
     text-align: center;
 }
 button{
@@ -14,7 +14,7 @@ button{
 }
 img{
     
-    height: 20px;
+    height: 200px;
     width: auto;
 }
 form{
