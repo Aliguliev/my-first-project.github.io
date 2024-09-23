@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <div id="main">
         <h1>Онлайн магазин</h1>
-        <img src="./pizza.png" alt="">
+        <img src="/pizza.png" alt="">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, doloribus excepturi? Maxime ea, temporibus, reprehenderit minima magni autem mollitia enim est officiis harum itaque nostrum illo aperiam atque, dolore repellat!</p>
         <button id="buy">Buy</button>
     </div>
@@ -25,12 +25,23 @@
         let tg=window.Telegram.WebApp;
         let buy=document.getElementById('buy');
         let order=document.getElementById('order');
-        buy.addEventListener('click',()=>{
-            document.getElementById('main').style.display='none';
-            document.getElementById('form').style.display='block';
+        let form = document.getElementById('form')
+        let main = document.getElementById('main')
+        buy.addEventListener("click", (event) => {
+            main.style.display = 'none';
+            form.style.display = "block";
             document.getElementById('user_name').value = tg.initDataUnsafe.user.first_name+" "+tg.initDataUnsafe.user.last_name
         });
         order.addEventListener("click",()=>{
+            let name = document.getElementById('user_name').value;
+            let email = document.getElementById('user_email').value;
+            let phone = document.getElementById('user_phone').value;
+            let data = {
+                name:name,
+                email:email,
+                phone:phone
+            }
+            tg.sendData(Json.stringify(data))
             tg.close();
         })
     </script>
