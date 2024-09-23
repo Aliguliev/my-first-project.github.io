@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body style="margin-top: 10vh; background-color: rgb(34, 34, 34); color:white; text-align: center;">
+    <div class="main">
+        <h1>Онлайн магазин</h1>
+        <img src="/pizza.png" alt="">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, doloribus excepturi? Maxime ea, temporibus, reprehenderit minima magni autem mollitia enim est officiis harum itaque nostrum illo aperiam atque, dolore repellat!</p>
+        <button id="buy" style="width: 80%; height: 50px; border: 0px; color:rgb(0, 164, 0); font-size: 20px; background-color: aliceblue;">Buy</button>
+    </div>
+    <form id="form">
+        <input type="text" placeholder="Имя" id="user_name">
+        <input type="text" placeholder="Email" id="user_email">
+        <input type="text" placeholder="Телефон" id="user_phone">
+        <button id="order">Оформить</button>
+    </form>
+    
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg=window.Telegram.WebApp;
+        let buy=document.getElementById('buy');
+        let order=document.getElementById('order');
+        buy.addEventListener('click',()=>{
+            document.getElementById('main').style.display='none';
+            document.getElementById('main').style.display='block';
+            document.getElementById('user_name').value = tg.initDataUnsafe.user.first_name+" "+tg.initDataUnsafe.user.last_name
+        });
+        order.addEventListener("click",()=>{
+            tg.close();
+        })
+    </script>
+</body>
+</html>
