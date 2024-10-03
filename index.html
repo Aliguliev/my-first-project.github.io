@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="timer">
+        <div class="time-see">
+            <span class="main-timer" id="hours">00</span>
+            <span class="main-timer">:</span>
+            <span  class="main-timer" id="minuts">00</span>
+            <span class="main-timer" >:</span>
+            <span class="main-timer" id="secounds">00</span>
+        </div>
+    </div>
+    <div id="newTimer">
+        <button id="botton-new-timer">Задать новый таймер</button>
+    </div>
+    <div id="window" >
+        <h1>Задайте таймер</h1>
+        <input type="number" class="input-time" id="input-hours" min="0" max="24" placeholder="часы" >
+        <span id="dvo">:</span>
+        <input type="number" class="input-time" id="input-minuts" min="0" max="60" placeholder="минуты">
+        <span id="dvo">:</span>
+        <input type="number" class="input-time" id="input-secounds" min="0" max="60" placeholder="секунды">
+        <button id="start" type="submit" value="Submit">Запустить</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
