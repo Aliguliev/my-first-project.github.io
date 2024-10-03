@@ -7,7 +7,7 @@ let secounds= document.getElementById('input-secounds');
 let hoursText = document.getElementById('hours');
 let minutsText = document.getElementById('minuts');
 let secoundsText = document.getElementById('secounds');
-var audio = new Audio('/time.mp3');
+var audio = new Audio('./time.mp3');
 
 btn.onclick=()=>{
     newTimer.style.display='block'
