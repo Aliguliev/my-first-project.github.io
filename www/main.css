@@ -1,0 +1,166 @@
+:root {
+    /* colors */
+    --primary-color: #dfdfe2;
+    --secondary-color: #ffffff;
+    --app-background-color: #4d4d62;
+    --background-color: #1b1b32;
+    --foreground-color: #3b3b4f;
+    --highlight-color: #f1be32;
+  
+    /* font sizes */
+    --root-font-size: 16px;
+    font-size: var(--root-font-size);
+  
+    /* font-families */
+    --font-headline: "Roboto Mono", monospace;
+    --font-family: "Lato", sans-serif;
+  }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body{
+    background-color: var(--app-background-color);
+    color:var(--secondary-color)
+}
+.container{
+    background-color:var(--background-color) ;
+    max-width: 600px;
+    width: 70%;
+    border: 5px solid var(--foreground-color);
+    padding: 10px;
+    margin: 10px auto;
+}
+.player-bar{
+    background-color:var(--app-background-color);
+    margin: 10px;
+    display: grid;
+    grid-template-columns:1fr 0.5fr 1fr ;
+
+}
+h1{
+    text-align: center;
+    font-size: 20px;
+}
+.parallel-lines div{
+    background-color: var(--highlight-color);
+    width: 100%;
+    height: 5px;
+}
+.parallel-lines{
+    display:  flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 5%;
+    flex-direction: column;
+}
+.music-artict{
+    width: 90%;
+    border: 10px solid var(--background-color);
+}
+.player-container{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    align-items: center;
+}
+button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+.player-display{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--background-color);
+    min-height: 200px;
+
+}
+.player-buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.player-buttons img{
+    width: 3vh;
+}
+.player-container{
+    margin: 10px;
+    padding: 10px   ;
+    background-color: var(--app-background-color);
+}
+#player-song-artist{
+    color: var(--highlight-color);
+    font-size: 1.5vh;
+}
+#player-song-title{
+    font-size: 2.5vh
+}
+p{
+    margin: 2px;
+}
+ul{
+    background-color: var(--app-background-color);
+    margin: 10px;
+    padding: 10px;
+}
+li{
+    
+    list-style: none; 
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    padding: 10px;
+    border-bottom: 1px solid var(--background-color);
+    align-items: center;
+    
+}
+.playlist-song-info{
+    display: grid;
+    height: 40px;
+    grid-template-columns: 3fr 1fr 0.5fr;
+    color:var(--primary-color);
+}
+.playlist-song-info span{
+    align-self: center  ;
+}
+.playlist-song-title{
+    text-align: start;
+}
+.last-p{
+    margin-bottom: 4vh;
+}
+.main:focus{
+    border: 1px dashed var(--highlight-color);
+}
+.active{
+    background-color: var(--background-color);
+}
+.list{
+    height: 10vh;
+    
+}
+#play-yellow{
+    display: none;
+}
+#pause-yellow{
+    display: none;
+}
+.del{
+    display: none;
+}
+@media only screen and (max-width: 650px){
+    #player-album-art{
+        display: none;
+    }
+    .player-container{
+        display: flex;
+        justify-content: center;
+        
+    }
+    .player-display{
+        background-image: url('https://cdn.freecodecamp.org/curriculum/js-music-player/quincy-larson-album-art.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 225px;
+    }
+}
